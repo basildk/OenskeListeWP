@@ -20,6 +20,8 @@ namespace ØnskelisteWP.Implementations
             var res = new List<ItemViewModel>();
             res.Add(new ItemViewModel(){ LineOne = "Ønske 1", LineTwo = "Beskrivelse af ønske 1"});
             res.Add(new ItemViewModel(){ LineOne = "Ønske 2", LineTwo = "Beskrivelse af ønske 1"});
+            res.Add(new ItemViewModel() { LineOne = "Ønske 2", LineTwo = "Beskrivelse af ønske 1" });
+            res.Add(new ItemViewModel() { LineOne = "Ønske 2", LineTwo = "Beskrivelse af ønske 1" });
 
             return res;
 
