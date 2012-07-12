@@ -23,6 +23,7 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using ØnskelisteWP.ViewModels;
+using Microsoft.Phone.Shell;
 
 
 
@@ -89,6 +90,7 @@ namespace ØnskelisteWP
                 Items.Add(item);
             }
             IsDataLoaded = true;
+            SystemTray.IsVisible = false;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

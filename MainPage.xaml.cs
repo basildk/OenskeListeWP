@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
 
 namespace ØnskelisteWP
 {
@@ -42,6 +43,13 @@ namespace ØnskelisteWP
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
+            ProgressIndicator ind = new ProgressIndicator();
+            ind.IsVisible = true;
+            ind.IsIndeterminate = true;
+            ind.Text = "Henter data ";
+            SystemTray.IsVisible= true;
+            SystemTray.ProgressIndicator = ind;
+
             if (!App.ViewModel.IsDataLoaded)
             {
                 App.ViewModel.LoadData();
